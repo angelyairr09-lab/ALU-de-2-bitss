@@ -1,20 +1,20 @@
-<!---
-
-This file is used to generate your project datasheet. Please fill in the information below and delete any unused
-sections.
-
-You can also include images in this folder and reference them in the markdown. Each image must be less than
-512 kb in size, and the combined size of all images must be less than 1 MB.
--->
-
 ## How it works
 
-Explain how your project works
+Este proyecto implementa una Unidad Aritmético-Lógica (ALU) combinacional de 2 bits que opera sobre dos números binarios sin signo: **A** (`A1 A0`) y **B** (`B1 B0`). De manera simultánea calcula la comparación (`A = B`, `A > B`), la resta (`A - B`) y la suma (`A + B`), reflejando los resultados en las salidas `uo[0]` a `uo[7]` (`Y0` a `Y7`).
 
 ## How to test
 
-Explain how to use your project
+1. Configura los primeros 4 interruptores de entrada (`ui[0]` a `ui[3]`):
+   - `ui[0]`: **A0**
+   - `ui[1]`: **A1**
+   - `ui[2]`: **B0**
+   - `ui[3]`: **B1**
+2. Observa los 8 LEDs de salida (`uo[0]` a `uo[7]`):
+   - **Y0 (`uo[0]`)**: Se enciende cuando `A = B`.
+   - **Y1 (`uo[1]`)**: Se enciende cuando `A > B`.
+   - **Y2–Y4 (`uo[2]:uo[4]`)**: Resultado de `A - B` (`R2` signo/borrow, `R1`, `R0`).
+   - **Y5–Y7 (`uo[5]:uo[7]`)**: Resultado de `A + B` (`S2` carry, `S1`, `S0`).
 
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+No se requiere hardware externo adicional; utiliza los interruptores DIP y LEDs estándar de la placa de demostración de Tiny Tapeout.
